@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+	      name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<link href="../styles/common/reset.css" rel="stylesheet">
+	<link href="../styles/common/common.css" rel="stylesheet">
+	<link href="../styles/contacts.css" rel="stylesheet">
+	<title>Contact</title>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="flex-around">
+			<div class="lc"></div>
+			<form class="contact-form">
+				<h2>Ми хотіли б Вам допомогти</h2>
+				<input class="input" placeholder="Iм’я" required type="text" maxlength="36">
+				<textarea class="input" placeholder="Повідомлення" maxlength="400"></textarea>
+				<h3 class="caps">Як вам відповісти?</h3>
+				<input class="input" placeholder="Номер телефона" type="text" maxlength="16" >
+				<input class="input" placeholder="Email" maxlength="60" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+				<div class="flex_center">
+					<button class="btn" type="submit">Надіслати запит</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<script>
+		document.addEventListener("submit", formSubmit);
+		
+		function formSubmit(event) {
+			event.preventDefault()
+			document.querySelector('.contact-form').reset();
+			alert('Форма отправлена')
+		}
+	</script>
+</body>
+</html>
